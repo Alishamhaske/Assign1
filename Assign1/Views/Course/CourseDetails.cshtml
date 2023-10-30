@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "CourseDetails";
+}
+
+<h1>CourseDetails</h1>
+<h2>Assignment 4</h2>
+@using(Html.BeginForm())
+{
+
+
+    <table class="table table-borderd">
+        <tr>
+            <td>Enter your Name</td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                @Html.RadioButton("gender","male")Male
+                @Html.RadioButton("gender","female")Female
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select skill</td>
+            <td>
+                <input type="checkbox" name="skill" value="Csharp" /> C sharp
+                <input type="checkbox" name="skill" value="Java" /> Java
+                <input type="checkbox" name="skill" value="Angular" /> Angular
+                <input type="checkbox" name="skill" value="React" /> React
+                <input type="checkbox" name="skill" value="Python" /> Python
+                <input type="checkbox" name="skill" value="Sql" /> SQL
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>Would you like to know more in deatils about the course</td>
+            <td>
+                @Html.DropDownList("cou")
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Save" />
+            </td>
+        </tr>
+
+
+
+
+    </table>
+}
+
